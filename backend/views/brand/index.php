@@ -11,12 +11,12 @@
         <th>操作</th>
 
     </tr>
-    <?php foreach ($brand as $brand): ?>
+    <?php foreach ($brands as $brand): ?>
         <tr>
             <td><?=$brand ->id?></td>
             <td><?=$brand ->name?></td>
             <td><?=$brand ->intro?></td>
-            <td><img style="width: 50px" src="<?='/'.$brand->logo?>"></td>
+            <td><?=\yii\bootstrap\Html::img($brand->aaa,['height'=>50])?></td>
             <td><?=$brand ->sort?></td>
             <td><?=$brand->status?></td>
 

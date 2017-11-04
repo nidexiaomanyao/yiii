@@ -10,16 +10,26 @@ use Yii;
 
 class Brand extends \yii\db\ActiveRecord
 {
-    public $imgFile;
+   // public $imgFile;
 
 
     public function rules()
     {
         //规则
         return [[['name', 'intro', 'sort', 'status'], 'required'],
-            [['imgFile'],'file','extensions'=>['gif','png','jpg'],'skipOnEmpty'=>false]
+            [['logo'],'safe']
+            //[['imgFile'],'file','extensions'=>['gif','png','jpg'],'skipOnEmpty'=>false]
 
         ];
+    }
+    public function getAaa(){
+       // echo 1;exit;
+        if (substr($this->logo,0,7)=="http://"){
+            return $this->logo;
+        }else{
+            return "@web/".$this->logo;
+
+        }
 
     }
 }

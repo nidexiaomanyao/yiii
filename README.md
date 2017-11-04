@@ -80,7 +80,11 @@ composer global require "fxp/composer-asset-plugin:^1.2.0"
 
 # 4.	常见面试问题
 
-
-
-
-
+ # 11.4
+ 做了文章管理
+ 
+ 文章分类管理
+ 
+ 用了2个表.
+ 
+ 踩了N多坑
